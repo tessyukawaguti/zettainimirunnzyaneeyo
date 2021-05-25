@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "https://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="viewport" content="width=480, user-scalable=yes">
+<title>iPhoneの加速度センサー、ジャイロセンサーテスト</title>
+<style type="text/css">
+<!--
+h1{font-size: 100%;}
+--> 
+</style>
+</head>
+<body>
+<h1>あああ</h1>
+<p>あああ<br>
+あああ<br></p>
+<hr>
+<div id="ac"></div>
+<hr>
+&copy; <a href="https://zapanet.info/">ZAPAnet総合情報局</a>
+<script language="javascript">
+<!--
+window.addEventListener('devicemotion', function(evt) {
+  //加速度
+  var ac = evt.acceleration;
+  var temp = "ac_x:" + ac.x +"<br>"; //x方向の加速度
+  temp += "ac_y:" + ac.y +"<br>";    //y方向の加速度
+  temp += "ac_z:" + ac.z +"<br>";    //z方向の加速度
+  
+  //傾き
+  var acg = evt.accelerationIncludingGravity;
+  temp += "acg_x:" + acg.x +"<br>"; //x方向の傾き
+  temp += "acg_y:" + acg.y +"<br>"; //y方向の傾き
+  temp += "acg_z:" + acg.z +"<br>"; //z方向の傾き
+  
+  //回転加速度
+  var rr = evt.rotationRate;
+  temp += "rr_a:" + rr.alpha +"<br>"; //z軸の回転加速度
+  temp += "rr_b:" + rr.beta +"<br>";  //x軸の回転加速度
+  temp += "rr_g:" + rr.gamma +"<br>"; //y軸の回転加速度
+  
+  document.getElementById("ac").innerHTML = temp;
+});
+-->
+</script>
+</body>
+</html>
